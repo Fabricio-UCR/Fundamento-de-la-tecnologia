@@ -1,0 +1,99 @@
+# 1.1 Variables
+
+clima_soleado:bool = True
+presupuesto:int = 0
+es_sabado:bool = True
+sin_trabajos_pendientes:bool = False
+pelicula_disponible:bool = False
+tienen_cupones: bool = False
+tienen_entradas:bool = False
+
+# 1.2 Expresiones booleanas
+
+opcion_1: bool = (clima_soleado and presupuesto >= 95000 and es sabado)
+opcion_2: bool = (presupuesto >= 15000 and sin_trabajos_pendientes)
+opcion_3: bool= (pelicula_disponible and (tienen_cupones or tienen_entradas))
+
+resultado = opcion_1 or opcion_2 or opcion_3
+
+#1.3
+
+# Resultado True
+
+clima_soleado:bool = True
+presupuesto:int = 100000
+es_sabado:bool = True
+sin_trabajos_pendientes:bool = False
+pelicula_disponible:bool = False
+tienen_cupones: bool = False
+tienen_entradas:bool = False
+
+resultado: bool = (clima_soleado and presupuesto >= 95000 and es sabado) or (presupuesto >= 15000 and sin_trabajos_pendientes) or (pelicula_disponible and (tienen_cupones or tienen_entradas))
+
+print(resultado) = True
+
+# Resultado False
+
+clima_soleado:bool = True
+presupuesto:int = 100000
+es_sabado:bool = True
+sin_trabajos_pendientes:bool = True
+pelicula_disponible:bool = True
+tienen_cupones: bool = False
+tienen_entradas:bool = False
+
+resultado: bool = (clima_soleado and presupuesto >= 95000 and es sabado) or (presupuesto >= 15000 and sin_trabajos_pendientes) or (pelicula_disponible and (tienen_cupones or tienen_entradas))
+
+ print(resultado ) = False
+
+#2.1 Variables
+
+nota_1: int = 0
+nota_2: int = 0
+nota_3: int = 0
+nota_4: int = 0
+
+promedio_general: float = (nota_1 + nota_2 + nota_3 + nota_4 ) / 4
+lavados_padre: int = 0
+lavados_madre: int = 0
+
+#2.2 Expresiones booleanas
+
+redimiento_academico: bool = (promedio_general >= 75 and nota_1 >= 70 and nota_2 >= 70 and nota_3 >= 70 and nota_4 >= 70)
+colaboracion_hogar: bool = (lavados_padre >= 6 or lavados_madre >= 10 or (lavados_padre + lavados_madre) >= 14)
+
+resultado: bool = rendimiento_academico and colaboracion_hogar
+
+#2.3 
+
+#Resultado True
+
+nota_1: int = 80
+nota_2: int = 75
+nota_3: int = 90
+nota_4: int = 85
+
+promedio_general: float = (nota_1 + nota_2 + nota_3 + nota_4 ) / 4
+
+lavados_padre: int = 6
+lavados_madre: int = 10
+
+resultado: bool = rendimiento_academico and colaboracion_hogar
+
+print (resultado) = True
+
+#Resultado False
+
+nota_1: int = 80
+nota_2: int = 65
+nota_3: int = 90
+nota_4: int = 85
+
+promedio_general: float = (nota_1 + nota_2 + nota_3 + nota_4 ) / 4
+
+lavados_padre: int = 6
+lavados_madre: int = 2
+
+resultado: bool = rendimiento_academico and colaboracion_hogar
+
+print (resultado) = False
